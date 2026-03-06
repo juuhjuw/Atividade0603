@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Clientes</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Clientes</h1>
+        
+        <form id="cadastroForm">
+            <!-- Seção de Dados Pessoais -->
+            <div class="section-title">Dados Pessoais</div>
+            
+            <div class="row">
+                <div class="form-group">
+                    <label class="required">Nome Completo</label>
+                    <input type="text" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">E-mail</label>
+                    <input type="email" placeholder="seu@email.com" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label class="required">Telefone</label>
+                    <input type="tel" placeholder="(11) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Data de Nascimento</label>
+                    <input type="text" placeholder="DD/MM/AAAA">
+                </div>
+            </div>
+
+            <!-- Seção de Gênero (Radio Button) -->
+            <div class="section-title">Gênero</div>
+            <div class="form-group">
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="masculino" name="genero" value="masculino">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="feminino" name="genero" value="feminino">
+                        <label for="feminino">Feminino</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="outro" name="genero" value="outro">
+                        <label for="outro">Outro</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="prefiro" name="genero" value="prefiro">
+                        <label for="prefiro">Prefiro não informar</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Endereço -->
+            <div class="section-title">Endereço</div>
+
+            <div class="form-group">
+                <label class="required">Endereço</label>
+                <input type="text" placeholder="Rua, Av, Logradouro" required>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label class="required">Cidade</label>
+                    <input type="text" placeholder="Sua cidade" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="required">Estado</label>
+                    <select required>
+                        <option value="">Selecione um estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label>CEP</label>
+                    <input type="text" placeholder="00000-000">
+                </div>
+
+                <div class="form-group">
+                    <label>Número</label>
+                    <input type="text" placeholder="Nº">
+                </div>
+            </div>
+
+            <!-- Seção de Preferências (Checkbox) -->
+            <div class="section-title">Preferências de Contato</div>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="email" name="contato" value="email">
+                        <label for="email">Receber ofertas por e-mail</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="whatsapp" name="contato" value="whatsapp">
+                        <label for="whatsapp">Receber mensagens no WhatsApp</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="sms" name="contato" value="sms">
+                        <label for="sms">Receber SMS</label>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="telefone" name="contato" value="telefone">
+                        <label for="telefone">Receber ligações</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção de Assunto (Dropdown) -->
+            <div class="section-title">Como conheceu nossa empresa?</div>
+            <div class="form-group">
+                <select>
+                    <option value="">Selecione uma opção</option>
+                    <option value="google">Google</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="amigo">Indicação de amigo</option>
+                    <option value="tv">Televisão</option>
+                    <option value="radio">Rádio</option>
+                    <option value="outdoor">Outdoor</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <!-- Observações -->
+            <div class="form-group">
+                <label>Observações</label>
+                <textarea rows="4" placeholder="Digite aqui informações adicionais..."></textarea>
+            </div>
+
+            <!-- Aceite (Checkbox) -->
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="termos" name="termos" value="aceito" required>
+                        <label for="termos" class="required">Li e aceito os termos de uso e política de privacidade</label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Cadastrar Cliente</button>
+        </form>
+    </div>
+
+    <script>
+        // Previne o envio do formulário e mostra uma mensagem de sucesso
+        document.getElementById('cadastroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cliente cadastrado com sucesso!');
+        });
+    </script>
+</body>
+</html>
